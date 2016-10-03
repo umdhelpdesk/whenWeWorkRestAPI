@@ -37,8 +37,8 @@ var apiRoutes = express.Router();
  
 // create a new user account (POST http://localhost:8080/api/signup)
 apiRoutes.post('/signup', function(req, res) {
-  if (!req.body.firstName || !req.body.password || !req.body.lastName) {
-    res.json({success: false, msg: 'Please pass name and password.'});
+  if (!req.body.firstName || !req.body.password) {
+    res.json({success: false, msg: 'Please add name and password.'});
   } else {
     var newUser = new User({
       firstName: req.body.firstName,
@@ -49,6 +49,7 @@ apiRoutes.post('/signup', function(req, res) {
     // save the user
     newUser.save(function(err) {
       if (err) {
+          console.log(err);
         return res.json({success: false, msg: 'Username already exists.'});
       }
       res.json({success: true, msg: 'Successful created new user.'});
@@ -59,7 +60,7 @@ apiRoutes.post('/signup', function(req, res) {
 // route to authenticate a user (POST http://localhost:8080/api/authenticate)
 apiRoutes.post('/authenticate', function(req, res) {
   User.findOne({
-    name: req.body.name
+    email: req.body
   }, function(err, user) {
     if (err) throw err;
  
