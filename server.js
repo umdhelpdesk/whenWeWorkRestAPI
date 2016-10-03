@@ -20,6 +20,7 @@ app.use(morgan('dev'));
 app.use(passport.initialize());
  
 // demo Route (GET http://localhost:8080)
+
 app.get('/', function(req, res) {
   res.send('Hello! The API is at http://localhost:' + port + '/api');
 });
@@ -119,6 +120,6 @@ app.use('/api', apiRoutes);
  
 // Start the server
 app.listen(port);
-console.log('There will be dragons: http://localhost:' + port);
+console.log('server running at : http://localhost:' + port);
 
 
