@@ -50,7 +50,7 @@ apiRoutes.post('/signup', function(req, res) {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       password: req.body.password,
-      email: req.body.email,  
+      email: req.body.email 
     });
     // save the user
     newUser.save(function(err) {
@@ -66,9 +66,9 @@ apiRoutes.post('/signup', function(req, res) {
 // route to authenticate a user (POST http://localhost:8080/api/authenticate)
 apiRoutes.post('/authenticate', function(req, res) {
   User.findOne({
-    email: req.body
+    email: req.body.email
   }, function(err, user) {
-    if (err) throw err;
+    if (err) console.log(err);
  
     if (!user) {
       res.send({success: false, msg: 'Authentication failed. User not found.'});
@@ -113,7 +113,7 @@ apiRoutes.get('/memberinfo', passport.authenticate('jwt', { session: false}), fu
   }
 });
  
-getToken = function (headers) {
+getToken = function (headers){
   if (headers && headers.authorization) {
     var parted = headers.authorization.split(' ');
     if (parted.length === 2) {
