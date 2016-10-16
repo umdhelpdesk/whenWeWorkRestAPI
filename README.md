@@ -11,6 +11,7 @@ Run the server.js file by using ```node server.js ``` command
 
 ##Recomended tools
  1.  [Mongo DB Compass](https://www.mongodb.com/download-center?jmp=nav#community):  Nice GUI application for managing Mongo
+ 2.  [Postman](https://www.getpostman.com/) Great tool for API Testing
 
 ##Current API Methods
 ###Get requests
