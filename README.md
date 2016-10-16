@@ -21,12 +21,12 @@ Run the server.js file by using ```node server.js ``` command
    Response
    ```json
    {
-  "success": true,
-  "msg": "Welcome in the member area William!",
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "doe@umd.edu"
-}```
+     "success": true,
+     "msg": "Welcome in the member area William!",
+     "firstName": "John",
+     "lastName": "Doe",
+     "email": "doe@umd.edu"
+   }```
    
    
     
