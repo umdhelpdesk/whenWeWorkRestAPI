@@ -1,4 +1,5 @@
 var express     = require('express');
+var cors        = require('cors');
 var app         = express();
 var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
@@ -14,10 +15,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
  app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, X-Custom-Header");
   res.header("Access-Control-Allow-Methods", "POST");
   next();
 });
+
 
 // log to console
 app.use(morgan('dev'));
@@ -40,8 +42,10 @@ require('./config/passport')(passport);
  
 // bundle our routes
 var apiRoutes = express.Router();
+
  
 // create a new user account (POST http://localhost:8080/api/signup)
+apiRoutes.options('/signup', cors());
 apiRoutes.post('/signup', function(req, res) {
   if (!req.body.firstName || !req.body.password) {
     res.json({success: false, msg: 'Please add name and password.'});
@@ -64,6 +68,7 @@ apiRoutes.post('/signup', function(req, res) {
 });
 
 // route to authenticate a user (POST http://localhost:8080/api/authenticate)
+apiRoutes.options('/authenticate', cors());
 apiRoutes.post('/authenticate', function(req, res) {
   User.findOne({
     email: req.body.email
@@ -89,12 +94,13 @@ apiRoutes.post('/authenticate', function(req, res) {
 });
 
 // route to a restricted info (GET http://localhost:8080/api/memberinfo)
+apiRoutes.options('/memberinfo', cors());
 apiRoutes.get('/memberinfo', passport.authenticate('jwt', { session: false}), function(req, res) {
   var token = getToken(req.headers);
   if (token) {
     var decoded = jwt.decode(token, config.secret);
     User.findOne({
-      name: decoded.name
+      email: decoded.email
     }, function(err, user) {
         if (err) throw err;
  
