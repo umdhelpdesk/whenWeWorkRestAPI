@@ -25,7 +25,7 @@ Run the server.js file by using ```node server.js ``` command
    ```json
    {
      "success": true,
-     "msg": "Welcome in the member area William!",
+     "msg": "Welcome in the member area John!",
      "firstName": "John",
      "lastName": "Doe",
      "email": "doe@umd.edu"
