@@ -16,7 +16,7 @@ Run the server.js file by using ```node server.js ``` command
    This returns a json object of members info
    It requires an Artherization header key with a JWT (Token) as the value.
    
-   ####Example response
+   Response
    ```json
    {
   "success": true,
