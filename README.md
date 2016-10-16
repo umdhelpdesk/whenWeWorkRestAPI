@@ -24,7 +24,8 @@ Run the server.js file by using ```node server.js ``` command
      "firstName": "John",
      "lastName": "Doe",
      "email": "doe@umd.edu"
-   }```
+   }
+   ```
    
    
     
