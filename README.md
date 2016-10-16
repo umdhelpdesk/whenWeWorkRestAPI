@@ -58,7 +58,7 @@ Run the server.js file by using ```node server.js ``` command
    passord: `pass`
   ```
   
-  *Request Response* (On success) Note: TOken is usually longer
+  *Request Response* (On success) Note: Token is usually longer
   ```json
   {
   "success": true,
