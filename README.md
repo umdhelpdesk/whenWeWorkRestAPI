@@ -25,10 +25,10 @@ Run the server.js file by using ```node server.js ``` command
    ```json
    {
      "success": true,
-     "msg": "Welcome in the member area John!",
-     "firstName": "John",
-     "lastName": "Doe",
-     "email": "doe@umd.edu"
+     "msg": "Welcome in the member area Ken",
+     "firstName": "Ken",
+     "lastName": "Bone",
+     "email": "kbone@umd.edu"
    }
    ```
    
@@ -38,10 +38,10 @@ Run the server.js file by using ```node server.js ``` command
   
   *Request Body Example* (Required Values)
   ```
-    firstName: 'john',
-    lastName: 'doe',
+    firstName: 'Ken',
+    lastName: 'Bone',
     password: 'pass',
-    email: 'doe@umd.edu'
+    email: 'kbone@umd.edu'
   ```
   *Response Example* (On success)
   ```json
@@ -54,7 +54,7 @@ Run the server.js file by using ```node server.js ``` command
   2 `http://localhost:8080/api/authenticate` This method authenticates a user and returns a token 
   *Request Headers*(Required)
   ```
-   email: 'doe@umd.edu'
+   email: 'kbone@umd.edu'
    passord: `pass`
   ```
   
