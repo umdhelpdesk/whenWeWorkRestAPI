@@ -30,7 +30,7 @@ Run the server.js file by using ```node server.js ``` command
    
    
 ###Post Requests
-  1.`http://localhost:8080/api/signup` This method creates new user.
+  1 `http://localhost:8080/api/signup` This method creates new user.
   
   *Request Body Example* (Required Values)
   ```
@@ -45,6 +45,21 @@ Run the server.js file by using ```node server.js ``` command
   "success": true,
   "msg": "Successful created new user."
   }
+  ```
+  
+  2 `http://localhost:8080/api/authenticate` This method authenticates a user and returns a token 
+  *Request Headers*(Required)
+  ```
+   email: 'doe@umd.edu'
+   passord: `pass`
+  ```
+  
+  *Request Response* (On success) Note: TOken is usually longer
+  ```json
+    {
+  "success": true,
+  "token": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJf"
+}
   ```
   
        
