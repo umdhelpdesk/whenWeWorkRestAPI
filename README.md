@@ -32,7 +32,7 @@ Run the server.js file by using ```node server.js ``` command
 ###Post Requests
   1.`http://localhost:8080/api/signup` This method creates new user.
   
-  *Request Body*.
+  *Request Body Example* (Required Values)
   ```
         firstName: 'john',
         lastName: 'doe',
