@@ -64,8 +64,9 @@ Run the server.js file by using ```node server.js ``` command
 
 ##Todo
 There are many thing in the backlog todo
-1 Figure out Efficient modeling for Calendar & shifts.
-2 Add CRUD methods for shifts
+
+1. Figure out Efficient modeling for Calendar & shifts.
+2. Add CRUD methods for shifts
 
   
        
