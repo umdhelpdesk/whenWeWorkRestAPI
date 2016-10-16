@@ -56,10 +56,10 @@ Run the server.js file by using ```node server.js ``` command
   
   *Request Response* (On success) Note: TOken is usually longer
   ```json
-    {
+  {
   "success": true,
   "token": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJf"
-}
+  }
   ```
   
        
