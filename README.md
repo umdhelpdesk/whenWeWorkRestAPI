@@ -11,11 +11,10 @@ Run the server.js file by using ```node server.js ``` command
 
 ##Current API Methods
 ###Get requests
-..* http://localhost:8080/  just displays a message that API is working
+ `http://localhost:8080/`  just displays a message that API is working
 
 
-..* http://localhost:8080/api/memberinfo 
-   This returns a json object of members info
+ `http://localhost:8080/api/memberinfo` This returns a json object of members info
    It requires an Artherization header key with a JWT (Token) as the value.  
    Response
    ```json
