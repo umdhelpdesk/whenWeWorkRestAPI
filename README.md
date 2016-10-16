@@ -14,7 +14,7 @@ Run the server.js file by using ```node server.js ``` command
 1. ```http://localhost:8080/``` just displays a message that API is working
 
 
-2. ``` http://localhost:8080/api/memberinfo``` 
+2. ```http://localhost:8080/api/memberinfo``` 
    This returns a json object of members info
    It requires an Artherization header key with a JWT (Token) as the value.
    
