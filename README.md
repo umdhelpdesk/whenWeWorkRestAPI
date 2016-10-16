@@ -10,7 +10,7 @@ Note: Have an instance of mongo db running
 Run the server.js file by using ```node server.js ``` command
 
 ##Recomended tools
- 1.  [Mongo DB Compass](https://www.mongodb.com/download-center?jmp=nav#community):  Nice GUI application for managing Mongo
+ 1.  [Mongo DB Compass](https://www.mongodb.com/download-center?jmp=nav#compass):  Nice GUI application for managing Mongo
  2.  [Postman](https://www.getpostman.com/) Great tool for API Testing
 
 ##Current API Methods
