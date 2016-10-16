@@ -38,10 +38,10 @@ Run the server.js file by using ```node server.js ``` command
   
   *Request Body Example* (Required Values)
   ```
-        firstName: 'john',
-        lastName: 'doe',
-        password: 'pass',
-        email: 'doe@umd.edu'
+    firstName: 'john',
+    lastName: 'doe',
+    password: 'pass',
+    email: 'doe@umd.edu'
   ```
   *Response Example* (On success)
   ```json
