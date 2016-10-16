@@ -39,6 +39,13 @@ Run the server.js file by using ```node server.js ``` command
         password: 'pass',
         email: 'doe@umd.edu'
   ```
+  *Response Example* (On success)
+  ```json
+  {
+  "success": true,
+  "msg": "Successful created new user."
+  }
+  ```
   
        
    
