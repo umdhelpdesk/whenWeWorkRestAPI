@@ -29,7 +29,18 @@ Run the server.js file by using ```node server.js ``` command
    ```
    
    
-   Still working on Readme
+ ###Post Requests
+  1.`http://localhost:8080/api/signup` This method creates new user.
+  
+  *Request Body*.
+  ```
+        firstName: 'john',
+        lastName: 'doe',
+        password: 'pass',
+        email: 'doe@umd.edu'
+  ```
+  
+       
    
     
 
