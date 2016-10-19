@@ -7,6 +7,7 @@ var mongoose    = require('mongoose');
 var passport	= require('passport');
 var config      = require('./config/database'); // get db config file
 var User        = require('./app/models/user'); // get the mongoose model
+var Shift       = require('./app/models/schedule');
 var port        = process.env.PORT || 8080;
 var jwt         = require('jwt-simple');
  
@@ -66,8 +67,13 @@ apiRoutes.post('/signup', function(req, res) {
     });
   }
 });
+/*********************** Current   *******************/
+apiRoutes.post('/addtempshift', passport.authenticate('jwt',{session: false}), function(req, res){
+       var token = getToken(req.headers);
 
-// route to authenticate a user (POST http://localhost:8080/api/authenticate)
+});
+
+//route to authenticate a user (POST http://localhost:8080/api/authenticate)
 apiRoutes.options('/authenticate', cors());
 apiRoutes.post('/authenticate', function(req, res) {
   User.findOne({
