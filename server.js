@@ -10,6 +10,7 @@ var User        = require('./app/models/user'); // get the mongoose model
 var Shift       = require('./app/models/schedule');
 var port        = process.env.PORT || 8080;
 var jwt         = require('jwt-simple');
+var SchedFunctions = require('./app/functions/scheduleFun.js');
  
 // get our request parameters
 app.use(bodyParser.urlencoded({ extended: false }));
