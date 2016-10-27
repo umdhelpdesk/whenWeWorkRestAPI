@@ -9,16 +9,19 @@ var ShiftSchema = new Schema({
     },
 
     startTime: {
-        type: Date,
-        required: true
+          hrs:Number,
+          mins: Number,
+
     },
 
     endTime: {
-        type: Date,
-        required: true
+         hrs: Number,
+         mins: Number,
+
     },
 
-    Day: Number
+    day: Number
 });
 
 module.exports = mongoose.model('Shift', ShiftSchema);
+

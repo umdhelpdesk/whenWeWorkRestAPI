@@ -12,7 +12,7 @@ var WeekSchema = new Schema({
             type: Number,
             default: 1
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
     },
     monday: {
         index: {
@@ -20,6 +20,7 @@ var WeekSchema = new Schema({
             default: 2
         },
         shifts: [ShiftSchema]
+
     },
     tuesday: {
         index: {
@@ -41,6 +42,7 @@ var WeekSchema = new Schema({
             default: 5
         },
         shifts: [ShiftSchema]
+
     },
     friday: {
         index: {
@@ -58,3 +60,4 @@ var WeekSchema = new Schema({
     }
 
 });
+module.exports = mongoose.model('Week', WeekSchema);

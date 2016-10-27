@@ -9,8 +9,10 @@ var scheduleSchema = new Schema({
           required: true,
           unique: true
       },
-      availability:WeekSchema,
-      work: WeekSchema
+      availability:{
+           type:[WeekSchema.Week]
+      }
+      //work: WeekSchema.Week
 });
 
 
