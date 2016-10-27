@@ -36,10 +36,6 @@ var createShift = function (userId, day, start, end) {
 }
 
 
-
-var userQuery = User.findOne({
-    'email': 'wkwao@umd.edu'
-});
 var addAvailability = function (body, user_id) {
 
     var userId = user_id;
