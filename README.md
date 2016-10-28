@@ -20,7 +20,7 @@ Run the server.js file by using ```node server.js ``` command
   
    *Request Header:* `Authorization : JWT (Token) as the value`
    
-   *Request Body:*
+   *Request Body:* 
     ```json
     {
     "day": 5,
