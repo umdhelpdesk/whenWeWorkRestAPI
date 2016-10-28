@@ -46,8 +46,9 @@ Run the server.js file by using ```node server.js ``` command
     
     *Request Header:* `Authorization : JWT (Token) as the value`
     
-     *Response Body:* (Add one shift at a time) 
-     ```json
+    *Response Body:* (Empty array means user has no shifts on that day) 
+     
+   ```json
       {
        "sunday": [],
        "monday": [
@@ -125,7 +126,7 @@ Run the server.js file by using ```node server.js ``` command
        "friday": [],
        "saturday": []
       }
-      ```
+   ```
     
 
 ###Get requests
