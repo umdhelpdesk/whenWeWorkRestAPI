@@ -8,6 +8,7 @@ var Schedule = require('../models/schedule');
 var Shift = require('../models/shift');
 var Week = require('../models/week');
 var jwt = require('jwt-simple');
+//var ObjectID = require("mongodb").ObjectID;
 
 var date = new Date();
 var createSchedule = function (newName, start) {
@@ -16,18 +17,73 @@ var createSchedule = function (newName, start) {
     });
     var schedule = new Schedule({
         name: newName,
-
     });
+    schedule.availability.push(week);
 
     schedule.save();
 }
 
 createSchedule("DevTest", "start");
 
+var searchDay = function (day, id) {
+    var filteredDay = [];
+
+    for (var i = 0; i < day.length; i++) {
+        if (id.equals(day[i].owner)) {
+            var shift = {
+                start: day[i].startTime,
+                end: day[i].endTime,
+                day: day[i].day
+            }
+            filteredDay.push(shift);
+        }
+    }
+
+    return filteredDay;
+}
+var getAvailability = function (_id, res) {
+    var scheduleQuery = Schedule.findOne({
+        'name': 'DevTest'
+    });
+
+    var resWeek = {
+        sunday: [],
+        monday: [],
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: [],
+        saturday: []
+    };
+    scheduleQuery.exec(
+        function (err, sched) {
+            if (err) {
+                console.log("sched querry err");
+            } else {
+                var week = sched.availability[0];
+
+                //if undefined
+                //console.log(week);
+                for (var key in resWeek) {
+                    var id = mongoose.mongo.ObjectId('58032bcfee0e82b857c91f83');
+                    resWeek[key] = searchDay(week[key].shifts, id)
+                }
+                console.log("get Availability");
+                //console.log(resWeek);
+                res.json(resWeek);
+
+            }
+        }
+    );
+}
+
+//var res = getAvailability(_id, day, res);
+
+
 var createShift = function (userId, day, start, end) {
     var shift = new Shift({
         day: day,
-        ownner: userId,
+        owner: userId,
         startTime: start,
         endTime: end
     });
@@ -94,9 +150,8 @@ var addAvailability = function (body, user_id) {
 
 };
 
-
-
 module.exports = {
     createSchedule: createSchedule,
-    addAvailability: addAvailability
+    addAvailability: addAvailability,
+    getAvailability: getAvailability
 };

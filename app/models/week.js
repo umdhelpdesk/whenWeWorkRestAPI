@@ -19,7 +19,7 @@ var WeekSchema = new Schema({
             type: Number,
             default: 2
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
 
     },
     tuesday: {
@@ -27,21 +27,21 @@ var WeekSchema = new Schema({
             type: Number,
             default: 3
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
     },
     wednesday: {
         index: {
             type: Number,
             default: 4
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
     },
     thursday: {
         index: {
             type: Number,
             default: 5
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
 
     },
     friday: {
@@ -49,14 +49,14 @@ var WeekSchema = new Schema({
             type: Number,
             default: 6
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
     },
     saturday: {
         index: {
             type: Number,
             default: 7
         },
-        shifts: [ShiftSchema]
+        shifts: [ShiftSchema.schema]
     }
 
 });
