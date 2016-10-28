@@ -46,7 +46,7 @@ Run the server.js file by using ```node server.js ``` command
     
     *Request Header:* `Authorization : JWT (Token) as the value`
     
-     *Request Body:*(Add one shift at a time) 
+     *Response Body:* (Add one shift at a time) 
      ```json
       {
        "sunday": [],
