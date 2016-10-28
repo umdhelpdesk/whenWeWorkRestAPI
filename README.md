@@ -14,6 +14,35 @@ Run the server.js file by using ```node server.js ``` command
  2.  [Postman](https://www.getpostman.com/) Great tool for API Testing
 
 ##Current API Methods
+
+###Schedule methods
+ 1.`http://localhost:8080/addAvailability` This route allows a user to add availability(Post Method)
+  
+   *Request Header:* `Authorization : JWT (Token) as the value`
+   
+   *Request Body:*
+    ```json
+    {
+    "day": 5,
+    "start":{
+     	 "hrs": 11,
+     	 "mins": 30
+     },
+     "end":{
+     	 "hrs": 11,
+     	 "mins": 30
+     }
+    }
+    ```
+   
+   *Response:* (On success Days as objects wit Array of shifts) Hrs: 11, mins: 30 means 11:30 and a 24 hr format
+   ```json
+   {
+  "success": true,
+  "msg": "Availability added"
+  }
+   ```
+
 ###Get requests
  1.`http://localhost:8080/`  just displays a message that API is working
 
