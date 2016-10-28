@@ -17,7 +17,6 @@ Run the server.js file by using ```node server.js ``` command
 
 ###Schedule methods
  1.`http://localhost:8080/addAvailability` This route allows a user to add availability(Post Method)
-  
    *Request Header:* `Authorization : JWT (Token) as the value`
    
    *Request Body:* 
