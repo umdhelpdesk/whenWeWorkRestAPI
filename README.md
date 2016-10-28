@@ -29,9 +29,10 @@ Run the server.js file by using ```node server.js ``` command
      	 "mins": 30
      },
      "end":{
-     	 "hrs": 11,
+     	 "hrs": 14,
      	 "mins": 30
     }
+   }
    ```
     
    
