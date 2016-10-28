@@ -34,7 +34,7 @@ Run the server.js file by using ```node server.js ``` command
     }
    }
    ```
-   *Response:* (On success Days as objects wit Array of shifts) Hrs: 11, mins: 30 means 11:30 and a 24 hr format
+   *Response body:* (On success Days as objects wit Array of shifts) Hrs: 11, mins: 30 means 11:30 and a 24 hr format
    ```json
      {
      "success": true,
@@ -46,9 +46,8 @@ Run the server.js file by using ```node server.js ``` command
    
    *Request Header:* `Authorization : JWT (Token) as the value`
    
-   *Request Body:*(Add one shift at a time) 
-    
-     
+   *Response body:*(Empty Array means user had no shifts on that day) 
+      
    ```json
       {
        "sunday": [],
