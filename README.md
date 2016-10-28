@@ -20,20 +20,19 @@ Run the server.js file by using ```node server.js ``` command
    
    *Request Header:* `Authorization : JWT (Token) as the value`
    
-   *Request Body:* 
-    ```json
-     {
-     "day": 5,
-     "start":{
-        "hrs": 11,
-        "mins": 30
-      },
-      "end":{
-        "hrs": 11,
-        "mins": 30
-       }
+   *Request Body:*(Add one shift at a time) 
+   ```json
+   "day": 5,
+    "start":{
+     	 "hrs": 11,
+     	 "mins": 30
+     },
+     "end":{
+     	 "hrs": 11,
+     	 "mins": 30
      }
-    ```
+   ```
+    
    
    *Response:* (On success Days as objects wit Array of shifts) Hrs: 11, mins: 30 means 11:30 and a 24 hr format
    ```json
