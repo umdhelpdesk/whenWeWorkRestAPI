@@ -31,8 +31,8 @@ Run the server.js file by using ```node server.js ``` command
       "end":{
         "hrs": 11,
         "mins": 30
+       }
      }
-    }
     ```
    
    *Response:* (On success Days as objects wit Array of shifts) Hrs: 11, mins: 30 means 11:30 and a 24 hr format
