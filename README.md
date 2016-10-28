@@ -41,6 +41,92 @@ Run the server.js file by using ```node server.js ``` command
   "msg": "Availability added"
   }
    ```
+  
+  2.`http://localhost:8080/addAvailability` (This route responds with all tem shifts set by user)
+    
+    *Request Header:* `Authorization : JWT (Token) as the value`
+    
+     *Request Body:*(Add one shift at a time) 
+       ```json
+      {
+       "sunday": [],
+       "monday": [
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 2
+         },
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 2
+         },
+         {
+           "start": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "end": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "day": 2
+         },
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 2
+         }
+       ],
+       "tuesday": [],
+       "wednesday": [],
+       "thursday": [
+         {
+           "start": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "end": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "day": 5
+         },
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 5
+         }
+       ],
+       "friday": [],
+       "saturday": []
+      }
+       ```
+    
 
 ###Get requests
  1.`http://localhost:8080/`  just displays a message that API is working
