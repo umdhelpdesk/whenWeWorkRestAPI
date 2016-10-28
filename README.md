@@ -22,7 +22,8 @@ Run the server.js file by using ```node server.js ``` command
    
    *Request Body:*(Add one shift at a time) 
    ```json
-   "day": 5,
+   {
+    "day": 5,
     "start":{
      	 "hrs": 11,
      	 "mins": 30
@@ -30,7 +31,7 @@ Run the server.js file by using ```node server.js ``` command
      "end":{
      	 "hrs": 11,
      	 "mins": 30
-     }
+    }
    ```
     
    
