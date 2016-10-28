@@ -42,10 +42,12 @@ Run the server.js file by using ```node server.js ``` command
      }
    ```
   
-  2.`http://localhost:8080/addAvailability` (This route responds with all tem shifts set by user)
+  2.`http://localhost:8080/addAvailability` (This route responds with all tem shifts set by user).
+   
+   *Request Header:* `Authorization : JWT (Token) as the value`
+   
+   *Request Body:*(Add one shift at a time) 
     
-    *Request Header:* `Authorization : JWT (Token) as the value`.
-    *Response Body:* (Empty array means user has no shifts on that day) 
      
    ```json
       {
