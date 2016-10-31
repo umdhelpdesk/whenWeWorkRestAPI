@@ -23,7 +23,7 @@ var createSchedule = function (newName, start) {
     schedule.save();
 }
 
-createSchedule("DevTest", "start");
+//createSchedule("DevTest", "start");
 
 var searchDay = function (day, id) {
     var filteredDay = [];
