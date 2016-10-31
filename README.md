@@ -14,6 +14,121 @@ Run the server.js file by using ```node server.js ``` command
  2.  [Postman](https://www.getpostman.com/) Great tool for API Testing
 
 ##Current API Methods
+
+###Schedule routes
+ 1.`http://localhost:8080/addAvailability` This route allows a user to add availability(Post Method)
+   
+   *Request Header:* `Authorization : JWT (Token) as the value`
+   
+   *Request Body:*(Add one shift at a time) 
+   ```json
+   {
+    "day": 5,
+    "start":{
+     	 "hrs": 11,
+     	 "mins": 30
+     },
+     "end":{
+     	 "hrs": 14,
+     	 "mins": 30
+    }
+   }
+   ```
+   *Response body:* (On success Days as objects wit Array of shifts) Hrs: 11, mins: 30 means 11:30 and a 24 hr format
+   ```json
+     {
+     "success": true,
+     "msg": "Availability added"
+     }
+   ```
+  
+  2.`http://localhost:8080/addAvailability` (This route responds with all tem shifts set by user).
+   
+   *Request Header:* `Authorization : JWT (Token) as the value`
+   
+   *Response body:*(Empty Array means user had no shifts on that day) 
+      
+   ```json
+      {
+       "sunday": [],
+       "monday": [
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 2
+         },
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 2
+         },
+         {
+           "start": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "end": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "day": 2
+         },
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 2
+         }
+       ],
+       "tuesday": [],
+       "wednesday": [],
+       "thursday": [
+         {
+           "start": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "end": {
+             "mins": 30,
+             "hrs": 11
+           },
+           "day": 5
+         },
+         {
+           "start": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "end": {
+             "hrs": 11,
+             "mins": 30
+           },
+           "day": 5
+         }
+       ],
+       "friday": [],
+       "saturday": []
+      }
+   ```
+    
+
 ###Get requests
  1.`http://localhost:8080/`  just displays a message that API is working
 
