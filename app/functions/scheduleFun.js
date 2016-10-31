@@ -65,8 +65,8 @@ var getAvailability = function (_id, res) {
                 //if undefined
                 //console.log(week);
                 for (var key in resWeek) {
-                    var id = mongoose.mongo.ObjectId('58032bcfee0e82b857c91f83');
-                    resWeek[key] = searchDay(week[key].shifts, id)
+
+                    resWeek[key] = searchDay(week[key].shifts, _id);
                 }
                 console.log("get Availability");
                 //console.log(resWeek);
