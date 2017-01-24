@@ -34,6 +34,7 @@ module.exports = function (apiRoutes) {
             });
         } else {
             var newUser = new User({
+                role: 'student',
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 password: req.body.password,
