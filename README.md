@@ -1,5 +1,11 @@
 # WhenWeWorkRestAPI
 The rest API for the scheduler project
+
+Using mLab; account information below:
+https://mlab.com/databases/schedulerdb/collections/user
+USERNAME: HDSP
+PWD: helpdeskpass1
+
 ##INSTALLATION GUIDE
 1. Fork repo as personal repo
 2. Clone the fork to local repository
